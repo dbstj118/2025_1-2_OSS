@@ -1,0 +1,16 @@
+Git 설정 파일 요약 표 (Windows 기준)
+구분	적용 범위	기본 경로	명령어 옵션	우선순위
+System	모든 사용자, 모든 저장소	C:\Program Fiels\Git\etc\gitconfig (또는 Git 설치 폴더 내부)	--system	낮음
+Global	현재 사용자 전체	C:\Users\<사용자명>\.gitconfig	--global	중간
+Local	특정 저장소	<repo>\.git\config	--local (기본)	가장 높음
+설정 파일 열기/편집: --system 모드인 경우, 관리자 모드로 git bash를 열기
+$ git config --system --edit
+$ git config --global --edit
+$ git config --local --edit
+주요 설정 명령어
+$ git config --global user.name ai7dnn
+$ git config --global user.email ai7dnn@gmail.com
+$ git config --global core.autocrlf true
+$ git config --global core.safecrlf false
+$ git config --global core.editor 'code --wait'
+$ git config --global init.defaultBranch main
